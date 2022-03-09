@@ -41,4 +41,3 @@
 ### 클래스 다이어그램(UML)
 
 ![img.png](img.png)
-<img src="./img.png" width="120" height="60">
