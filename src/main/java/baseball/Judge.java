@@ -4,7 +4,8 @@ public class Judge {
 
     public String check(String counterNumbers, String expectNumbers) {
 
-        if (expectNumbers.length() != 3 || !expectNumbers.matches("^[1-9]*$")) {
+        if (expectNumbers.length() != 3 || !expectNumbers.matches("^[1-9]*$")
+            || isDuplicated(expectNumbers)) {
             throw new IllegalArgumentException("Invalid numbers: length(" +
                     expectNumbers.length() + ") numbers(" + expectNumbers + ")");
         }
@@ -37,6 +38,13 @@ public class Judge {
 
         hint = hint + " " + strikes + "스트라이크";
         return hint;
+    }
+
+    private boolean isDuplicated(String expectedNumbers) {
+        if (expectedNumbers.charAt(0) == expectedNumbers.charAt(1)) return true;
+        if (expectedNumbers.charAt(0) == expectedNumbers.charAt(2)) return true;
+        if (expectedNumbers.charAt(1) == expectedNumbers.charAt(2)) return true;
+        return false;
     }
 
     private void countStrikes(String counterNumbers, String expectNumbers, int idx, int[] countOfStrikeAndBall) {
