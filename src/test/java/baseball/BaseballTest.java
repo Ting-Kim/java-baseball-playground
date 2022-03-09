@@ -56,7 +56,8 @@ public class BaseballTest {
                 Arguments.of("009"),
                 Arguments.of("000"),
                 Arguments.of("100"),
-                Arguments.of("120")
+                Arguments.of("120"),
+                Arguments.of("555")
         );
     }
 
@@ -64,7 +65,7 @@ public class BaseballTest {
         return Stream.of(
                 Arguments.of("123", "1볼"),
                 Arguments.of("259", "3볼"),
-                Arguments.of("111", "낫싱"),
+                Arguments.of("134", "낫싱"),
                 Arguments.of("539", "1볼 1스트라이크"),
                 Arguments.of("593", "2스트라이크"),
                 Arguments.of("529", "2볼 1스트라이크"),
